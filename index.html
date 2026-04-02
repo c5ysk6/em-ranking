@@ -177,14 +177,14 @@ function render() {
     <div class="date-range">📅 ${d.dateRange}</div>
     <div class="tbl-wrap"><table>
     <thead><tr>
-      <th>順位</th><th>店舗</th><th>総売上</th><th class="hide-sp">生産性/人</th><th>${cmpHdr}</th>
+      <th>順位</th><th>店舗</th><th>総売上</th><th class="hide-sp">1人当たり/人</th><th>${cmpHdr}</th>
     </tr></thead><tbody>`;
 
     d.store.forEach(item => {
       const rb = item.rank <= 3
         ? `<span class="rb r${item.rank}">${item.rank}</span>`
         : `<span class="rb rn">${item.rank}</span>`;
-      // スマホでは生産性を店舗名の下に表示
+      // スマホでは1人当たりを店舗名の下に表示
       const prodSub = `<span class="nm-sub">生産性 ¥${item.productivity.toLocaleString()}（${item.stylistCount}人）</span>`;
       html += `<tr>
         <td>${rb}</td>
