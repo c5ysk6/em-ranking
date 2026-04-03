@@ -189,7 +189,7 @@ function render() {
         <td>${item.storeName}</td>
         <td>${item.customers}人</td>
         <td>${item.nominated}人<span class="nm-sub">指名率 ${item.nomRate}%</span></td>
-        <td>¥${item.sales.toLocaleString()}<span class="nm-sub">¥${item.perPerson.toLocaleString()}/人 (${item.stylistCount}人)</span></td>
+        <td>¥${item.sales.toLocaleString()}<span class="nm-sub">¥${item.perPerson.toLocaleString()}/人</span></td>
         <td>${diff(item.prevRank, item.rank)}</td>
       </tr>`;
     });
