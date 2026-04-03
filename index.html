@@ -147,7 +147,6 @@ function render() {
   <div class="tbl-wrap"><table>
   <thead><tr>
     <th>順位</th><th>スタッフ</th>
-    <th class="hide-sp">指名数</th>
     <th>指名売上</th><th>${cmpHdr}</th>
   </tr></thead><tbody>`;
 
@@ -162,8 +161,7 @@ function render() {
     html += `<tr>
       <td>${rb}</td>
       <td><span class="nm">${item.name}</span>${pm}${storeSub}</td>
-      <td class="hide-sp">${item.noms}人</td>
-      <td>¥${item.sales.toLocaleString()}<span class="nm-sub">単価 ¥${item.unitPrice.toLocaleString()}</span></td>
+      <td>¥${item.sales.toLocaleString()}<span class="nm-sub">単価 ¥${item.unitPrice.toLocaleString()}・${item.noms}人</span></td>
       <td>${diff(item.prevRank, item.rank)}</td>
     </tr>`;
   });
