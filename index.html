@@ -262,7 +262,7 @@ function renderForecast() {
   const sel = document.getElementById('fc-store-sel').value;
   const fc  = FORECAST;
 
-  document.getElementById('sub').textContent = fc.label + '（予測）';
+  document.getElementById('sub').textContent = fc.label;
 
   const info = `営業${fc.elapsed}日経過 / ${fc.total}日（残${fc.remaining}日）`;
 
